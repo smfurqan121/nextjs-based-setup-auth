@@ -1,0 +1,42 @@
+.hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  
+
+  .ant-menu-dark,
+.ant-menu-dark .ant-menu-sub,
+.ant-menu-dark .ant-menu-item,
+.ant-menu-dark .ant-menu-submenu-title {
+  color: white !important;
+}
+
+.custom-menu .ant-menu-item,
+.custom-menu .ant-menu-submenu-title {
+  color: white !important;
+}
+
+
+
+/* Active Menu and Submenu Styling */
+.custom-menu .ant-menu-item-selected,
+.custom-menu .ant-menu-submenu-title-selected {
+  color: #ffffff !important;
+  background: none !important;
+}
+
+.custom-menu .ant-menu-item {
+  color: #dee4df !important;
+}
+
+.custom-menu .ant-menu-submenu-title {
+  color: #dee4df !important;
+}
+
+.custom-menu .ant-menu-item:hover,
+.custom-menu .ant-menu-submenu-title:hover {
+  color: #ffffff !important;
+}
+
+.ant-menu-sub {
+  background: transparent !important;
+}
