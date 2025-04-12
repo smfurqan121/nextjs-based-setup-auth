@@ -27,6 +27,7 @@ import Link from "next/link";
 import { useAuth } from "@/auth/context";
 import { usePathname, useRouter } from "next/navigation";
 import toast from 'react-hot-toast';
+import { RoleGuard } from "@/components/RoleGuard";
 
 const { Header, Sider, Content } = Layout;
 
@@ -154,6 +155,7 @@ const MainDashboardLayout = ({ children }: { children: React.ReactNode }) => {
   
 
   return (
+    <RoleGuard allowedRoles={['admin', 'vendor']}>
     <Layout className="h-screen">
       {!isMobile && (
         <Sider collapsed={collapsed} className="hide-scrollbar" style={{ background: "gray", height: "100vh", position: "fixed", left: 0 }}>
@@ -196,6 +198,7 @@ const MainDashboardLayout = ({ children }: { children: React.ReactNode }) => {
         </Content>
       </Layout>
     </Layout>
+    </RoleGuard>
   );
 };
 
